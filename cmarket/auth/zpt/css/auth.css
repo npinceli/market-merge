@@ -59,6 +59,20 @@ body {
     color: var(--white-font);
 }
 
+.input-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input{
+    flex: 1;
+}
+
+.input-container svg {
+    margin-left: 5px;
+}
+
 .btn-form {
     font-weight: bold;
     width: 100%;
@@ -87,4 +101,9 @@ body {
 .container-form-f a:hover {
     text-decoration: underline;
     transition: .5s;
+}
+
+.erro-email, .certo-email {
+    
+    display: inline;
 }

@@ -12,6 +12,7 @@ class Autenticacao(SimpleItem.SimpleItem):
     _entrar = PageTemplateFile("zpt/entrar.zpt", globals())
     _cadastrar = PageTemplateFile("zpt/cadastrar.zpt", globals())
     auth_css = PageTemplateFile("zpt/css/auth.css", globals())
+    auth_js = PageTemplateFile("zpt/js/auth.js", globals())
 
     def entrar(self):
         """Pagina de login."""

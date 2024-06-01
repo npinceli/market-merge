@@ -2,7 +2,7 @@
 <head>
     <title>MarketMerge</title>
     <link rel="stylesheet" type="text/css" href="auth_css">
-</head>
+    <script src="teste_js"></script>
 <body>
     <section class="container">
         <div class="container-esq">
@@ -17,6 +17,7 @@
                     <input class="btn-form" type="submit" value="Entrar">
                     <a tal:attributes="href string: ../auth/cadastrar"><span>Nao tenho cadastro</span></a>
                 </form>
+                <!-- <button tal:attributes="onclick string:javascript:teste(this)" style="width: 200px;">AA</button> -->
             </div>
         </div>
         <div class="container-dir">
