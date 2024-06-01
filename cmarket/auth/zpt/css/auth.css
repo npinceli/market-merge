@@ -1,0 +1,90 @@
+@import url(main_css);
+
+body {
+    background-color: var(--background);
+    color: white;
+    height: 100vh;
+}
+
+.container-cadastro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.container-cadastro-esq, .container-cadastro-dir {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.container-cadastro-img {
+    width: 500px;
+}
+
+.cadastro {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    width: 400px;
+    padding: 32px 24px;
+}
+
+.cadastro p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.cadastro-form label {
+    align-self: flex-start;
+    font-weight: bold;
+}
+
+.input-form {
+    background-color: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    width: 100%;
+    padding: 5px 8px;
+    margin-bottom: 6px;
+    color: var(--white-font);
+}
+
+.btn-cadastrar {
+    font-weight: bold;
+    width: 100%;
+    padding: 8px 8px;
+    color: var(--primary-font);
+    background-color: var(--white-font);
+    border: none;
+    border-radius: var(--radius);
+    margin-top: 10px;
+}
+
+.btn-cadastrar:hover {
+    color: var(--white-font);
+    background-color: var(--primary);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cadastro-form a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.cadastro-form a:hover {
+    text-decoration: underline;
+    transition: .5s;
+}
