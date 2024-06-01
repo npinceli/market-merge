@@ -6,7 +6,7 @@ body {
     height: 100vh;
 }
 
-.container-cadastro{
+.container{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -14,37 +14,37 @@ body {
     height: 100%;
 }
 
-.container-cadastro-esq, .container-cadastro-dir {
+.container-esq, .container-dir {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
 }
 
-.container-cadastro-img {
+.container-img {
     width: 500px;
 }
 
-.cadastro {
+.container-form {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     width: 400px;
     padding: 32px 24px;
 }
 
-.cadastro p {
+.container-form p {
     font-size: 14px;
     margin-bottom: 8px;
 }
 
-.cadastro-form {
+.container-form-f {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
 
-.cadastro-form label {
+.container-form-f label {
     align-self: flex-start;
     font-weight: bold;
 }
@@ -59,7 +59,7 @@ body {
     color: var(--white-font);
 }
 
-.btn-cadastrar {
+.btn-form {
     font-weight: bold;
     width: 100%;
     padding: 8px 8px;
@@ -70,21 +70,21 @@ body {
     margin-top: 10px;
 }
 
-.btn-cadastrar:hover {
+.btn-form:hover {
     color: var(--white-font);
     background-color: var(--primary);
     cursor: pointer;
     transition: .3s;
 }
 
-.cadastro-form a {
+.container-form-f a {
     text-decoration: none;
     color: white;
     width: 100%;
     text-align: center;
 }
 
-.cadastro-form a:hover {
+.container-form-f a:hover {
     text-decoration: underline;
     transition: .5s;
 }

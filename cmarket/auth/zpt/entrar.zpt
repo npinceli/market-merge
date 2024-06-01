@@ -4,6 +4,24 @@
     <link rel="stylesheet" type="text/css" href="auth_css">
 </head>
 <body>
-    entrar
+    <section class="container">
+        <div class="container-esq">
+            <div class="container-form">
+                <h2>Entrar</h2>
+                <p>Entre na sua conta</p>
+                <form action="entrar_conta" class="container-form-f" method="post">
+                    <label for="usuario">Usuario</label>
+                    <input class="input-form" type="text" name="usuario" id="usuario" placeholder="Nome de perfil">
+                    <label for="senha">Senha</label>
+                    <input class="input-form" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                    <input class="btn-form" type="submit" value="Entrar">
+                    <a tal:attributes="href string: ../auth/cadastrar"><span>Nao tenho cadastro</span></a>
+                </form>
+            </div>
+        </div>
+        <div class="container-dir">
+            <img class="container-img" src="img/login">
+        </div>
+    </section>
 </body>
 </html>

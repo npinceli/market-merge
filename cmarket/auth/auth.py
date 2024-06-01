@@ -17,6 +17,22 @@ class Autenticacao(SimpleItem.SimpleItem):
         """Pagina de login."""
         return self._entrar()
 
+    def entrar_conta(self):
+        """A."""
+        dados = self.REQUEST.form
+
+        for i in self._model_auth.busca_usuario(dados['usuario']):
+            if i:
+                senha = i.senha_hash
+                # Retorna true or false.
+                compara_senha = pbkdf2_sha256.verify(dados['senha'], senha)
+
+                if compara_senha:
+                    raise Exception(1)
+                else:
+                    raise Exception(3)
+        raise Exception(2)
+
     def cadastrar(self):
         """Pagina de cadastro."""
         return self._cadastrar()

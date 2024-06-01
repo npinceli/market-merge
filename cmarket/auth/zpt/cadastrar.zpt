@@ -4,15 +4,15 @@
     <link rel="stylesheet" type="text/css" href="auth_css">
 </head>
 <body>
-    <section class="container-cadastro">
-        <div class="container-cadastro-esq">
-            <img class="container-cadastro-img" src="img/cadastro">
+    <section class="container">
+        <div class="container-esq">
+            <img class="container-img" src="img/cadastro">
         </div>
-        <div class="container-cadastro-dir">
-            <div class="cadastro">
+        <div class="container-dir">
+            <div class="container-form">
                 <h2>Criar uma conta</h2>
                 <p>Entre para uma comunidade de vendas online</p>
-                <form action="auth/cadastrar_usuario" class="cadastro-form" method="post">
+                <form action="auth/cadastrar_usuario" class="container-form-f" method="post">
                     <label for="usuario">Usuario</label>
                     <input class="input-form" type="text" name="usuario" id="usuario" placeholder="Nome de perfil">
                     <label for="nome">Nome Completo</label>
@@ -21,7 +21,7 @@
                     <input class="input-form" type="email" name="email" id="email" placeholder="nome@dominio.com">
                     <label for="senha">Senha</label>
                     <input class="input-form" type="password" name="senha" id="senha" placeholder="Senha forte">
-                    <input class="btn-cadastrar" type="submit" value="Criar conta">
+                    <input class="btn-form" type="submit" value="Criar conta">
                     <a tal:attributes="href string: ../auth/entrar"><span>Ja sou cadastrado</span></a>
                 </form>
             </div>
