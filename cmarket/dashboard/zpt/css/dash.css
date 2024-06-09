@@ -1,0 +1,82 @@
+@import url(main_css);
+
+body {
+    background-color: var(--secondary-background);
+}
+
+.container {
+    width: 80%;
+    margin: 12px auto 0 auto;
+}
+
+.produtos {
+    background-color: var(--secondary-background);
+    border: 1px solid var(--border);
+    padding: 12px;
+    border-radius: var(--radius);
+    color: var(--white-font);
+}
+
+.produtos-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+#procurar {
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--background);
+    color: var(--white-font);
+}
+
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.produtos-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.produtos-card-titulo {
+    font-size: 22px;
+    text-align: center;
+}
+.produtos-card-preco {
+    font-size: 18px;
+}
+
+.produtos-card-info {
+    font-size: 12px;
+}
+
+.produtos-card-info span {
+    text-decoration: underline;
+}
+
+.produtos-card-info span:hover {
+    cursor: pointer;
+}
+
+.btn-card-info {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-align: center;
+    text-decoration: none;
+    color: var(--white-font);
+    font-weight: bold;
+    background-color: var(--primary);
+}

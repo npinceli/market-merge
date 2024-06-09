@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="dash_css">
+</head>
+<body>
+    <tal:block tal:content="structure python:context.header()"></tal:block>
+    <section class="container produtos">
+        <div class="produtos-top">
+            <span>Listando 10 de 10 produtos</span>
+            <input type="text" name="procurar" id="procurar" placeholder="Procurar">
+        </div>
+        <div class="produtos-grid">
+            <div class="produtos-card">
+                <img style="width: 175px;" src="https://t.ctcdn.com.br/HbOlEI8E042Mg0wCFOd2e0L8dHk=/fit-in/600x600/filters:fill(transparent):watermark(wm/prd.png,-32p,center,1,none,15)/i716536.png"/>
+                <h2 class="produtos-card-titulo">Samsung Galaxy Book 2</h2>
+                <span class="produtos-card-preco">R$ 2699.99</span>
+                <span class="produtos-card-qtd">2 disponiveis</span>
+                <a class="btn-card-info" href="#">Ver mais</a>
+                <p class="produtos-card-info">Anunciado por <span>nicolas</span></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

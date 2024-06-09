@@ -15,7 +15,7 @@
                 <p>Entre para uma comunidade de vendas online</p>
                 <form action="cadastrar_usuario" class="container-form-f" method="post">
                     <label for="usuario">Usuario</label>
-                    <input class="input-form" type="text" name="usuario" id="usuario" placeholder="Nome de perfil" required maxlength="20">
+                    <input class="input-form" type="text" name="usuario" id="usuario" placeholder="Nome de perfil" required maxlength="9">
                     <label for="nome">Nome Completo</label>
                     <input class="input-form" type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
                     <label for="email">E-mail</label>

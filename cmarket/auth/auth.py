@@ -2,7 +2,6 @@ from OFS import SimpleItem
 from Products.PageTemplates.PageTemplateFile import PageTemplateFile
 from Products.marketmerge.model.Auth.mAuth import MAuth
 from passlib.hash import pbkdf2_sha256
-import json
 
 
 class Autenticacao(SimpleItem.SimpleItem):
@@ -28,7 +27,8 @@ class Autenticacao(SimpleItem.SimpleItem):
             compara_senha = pbkdf2_sha256.verify(dados['senha'], senha)
 
             if compara_senha:
-                raise Exception(1)
+                return self.REQUEST.RESPONSE.\
+                    redirect('/m/market/dashboard/dash')
             else:
                 raise Exception(3)
         raise Exception(2)

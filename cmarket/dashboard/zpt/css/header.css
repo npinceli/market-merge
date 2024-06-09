@@ -1,0 +1,64 @@
+@import url(main_css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.ctn {
+    width: 80%; 
+    margin: 0 auto;
+    background-color: var(--secondary-background);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 22px;
+    border: 1px solid var(--border);
+    padding: 12px;
+    border-radius: var(--radius);
+}
+
+.menu-logo {
+    width: 200px;
+}
+
+.menu-itens {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.menu-itens li {
+    list-style: none;
+}
+
+.menu-itens a {
+    text-decoration: none;
+    color: var(--white-font);
+}
+
+.menu-itens a:hover {
+    transition: .3s;
+    color: var(--primary);
+    text-decoration: unde;
+}
+
+.menu-user {
+    width: 200px;
+    color: var(--white-font);
+    text-align: end;
+}
+
+.menu-user span {
+    color: var(--primary);
+}
+
+.menu-user span:hover {
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: underline;
+}
