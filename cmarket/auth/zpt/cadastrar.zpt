@@ -13,7 +13,7 @@
             <div class="container-form">
                 <h2>Criar uma conta</h2>
                 <p>Entre para uma comunidade de vendas online</p>
-                <form action="auth/cadastrar_usuario" class="container-form-f" method="post">
+                <form action="cadastrar_usuario" class="container-form-f" method="post">
                     <label for="usuario">Usuario</label>
                     <input class="input-form" type="text" name="usuario" id="usuario" placeholder="Nome de perfil" required maxlength="20">
                     <label for="nome">Nome Completo</label>

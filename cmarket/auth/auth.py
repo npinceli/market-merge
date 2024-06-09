@@ -2,11 +2,11 @@ from OFS import SimpleItem
 from Products.PageTemplates.PageTemplateFile import PageTemplateFile
 from Products.marketmerge.model.Auth.mAuth import MAuth
 from passlib.hash import pbkdf2_sha256
+import json
 
 
 class Autenticacao(SimpleItem.SimpleItem):
     """Controller de autenticacao de usuarios."""
-
     _model_auth = MAuth()
 
     _entrar = PageTemplateFile("zpt/entrar.zpt", globals())
@@ -23,15 +23,14 @@ class Autenticacao(SimpleItem.SimpleItem):
         dados = self.REQUEST.form
 
         for i in self._model_auth.busca_usuario(dados['usuario']):
-            if i:
-                senha = i.senha_hash
-                # Retorna true or false.
-                compara_senha = pbkdf2_sha256.verify(dados['senha'], senha)
+            senha = i.senha_hash
+            # Retorna true or false.
+            compara_senha = pbkdf2_sha256.verify(dados['senha'], senha)
 
-                if compara_senha:
-                    raise Exception(1)
-                else:
-                    raise Exception(3)
+            if compara_senha:
+                raise Exception(1)
+            else:
+                raise Exception(3)
         raise Exception(2)
 
     def cadastrar(self):
@@ -42,7 +41,15 @@ class Autenticacao(SimpleItem.SimpleItem):
         """Cadastrar usuario na plataforma."""
         dados = self.REQUEST.form
 
+        # Verificar se o usuario ja existe
+        duplicado = self._model_auth.busca_usuario(dados['usuario'])
+
+        if duplicado:
+            return self.REQUEST.RESPONSE.redirect('/m/market/auth/cadastrar')
+
         senha_hash = pbkdf2_sha256.hash(dados['senha'])
 
         self._model_auth.inserir_usuario(dados['nome'], dados['usuario'],
                                          dados['email'], senha_hash)
+
+        return self.REQUEST.RESPONSE.redirect('/m/market/auth/entrar')
