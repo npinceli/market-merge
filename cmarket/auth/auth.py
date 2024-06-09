@@ -27,6 +27,7 @@ class Autenticacao(SimpleItem.SimpleItem):
             compara_senha = pbkdf2_sha256.verify(dados['senha'], senha)
 
             if compara_senha:
+                self.sessao.definir_sessao({'id_usuario': i.id_usuario})
                 return self.REQUEST.RESPONSE.\
                     redirect('/m/market/dashboard/dash')
             else:

@@ -15,4 +15,10 @@ class Dashboard(SimpleItem.SimpleItem):
 
     def dash(self):
         """View principal do dashboard."""
+        teste = self.sessao.obter_sessao()
+
+        a = teste.get('id_usuario')
+
+        raise Exception(a)
+
         return self._dashboard()
