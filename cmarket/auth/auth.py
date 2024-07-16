@@ -27,12 +27,13 @@ class Autenticacao(SimpleItem.SimpleItem):
             compara_senha = pbkdf2_sha256.verify(dados['senha'], senha)
 
             if compara_senha:
-                self.sessao.definir_sessao({'id_usuario': i.id_usuario})
+                self.sessao.definir_sessao({'logado': i.id_usuario})
                 return self.REQUEST.RESPONSE.\
                     redirect('/m/market/dashboard/dash')
             else:
-                raise Exception(3)
-        raise Exception(2)
+                return self.REQUEST.RESPONSE.\
+                    redirect('/m/market/auth/entrar')
+        return self.REQUEST.RESPONSE.redirect('/m/market/auth/entrar')
 
     def cadastrar(self):
         """Pagina de cadastro."""

@@ -10,7 +10,7 @@
         </div>
         <ul class="menu-itens">
             <li><a tal:attributes="href string: /m/market/dashboard/dash">Produtos</a></li>
-            <li><a href="">Meus Anuncios</a></li>
+            <li><a tal:attributes="href string: /m/market/dashboard/anuncios">Meus Anuncios</a></li>
             <li><a href="">Minhas Vendas</a></li>
         </ul>
         <div class="menu-user"><p>Bem vindo, <span>Nicolas</span></p></div>

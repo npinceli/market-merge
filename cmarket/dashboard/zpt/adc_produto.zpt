@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Anuncio</title>
+    <link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+    <tal:block tal:content="structure python:context.header()"></tal:block>
+    <form action="adicionar_saida" method="post">
+        <input type="hidden" name="id_vendedor" id="id_vendedor" tal:attributes="value options/dados">
+        <input type="text" name="nome_produto" id="nome_produto" placeholder="Nome produto">
+        <input type="text" name="img_produto" id="img_produto" placeholder="Imagem produto">
+        <input type="text" name="preco" id="preco" placeholder="Preco produto">
+        <input type="text" name="quantidade" id="quantidade" placeholder="Quantidade produto">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<html>
+<head>
+    <title>Anuncio</title>
+    <link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+    <tal:block tal:content="structure python:context.header()"></tal:block>
+    <a tal:attributes="href string:/m/market/dashboard/adicionar">Adicionar produto</a>
+</body>
+</html>
