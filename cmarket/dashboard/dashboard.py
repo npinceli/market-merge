@@ -56,4 +56,14 @@ class Dashboard(SimpleItem.SimpleItem):
         """Insere o produto no banco."""
         produto = self.REQUEST.form
 
-        raise Exception(produto)
+        id_vendedor = produto['id_vendedor']
+        nome_produto = produto['nome_produto']
+        img_produto = produto['img_produto']
+        preco = produto['preco']
+        quantidade = produto['quantidade']
+
+        self._model_dashboard.inserir_produto(id_vendedor=id_vendedor,
+                                              nome_produto=nome_produto,
+                                              img_produto=img_produto,
+                                              preco=preco,
+                                              quantidade=quantidade)
